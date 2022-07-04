@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet" />
+        <link th:href="@{/css/estilos.css}" rel="stylesheet" />
+    </head>
+    <body>
+        <div class="container mt-5 p-5">
+            <form th:action="@{/auth/main}" >
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Usuario</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Usuarrio">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="exampleFormControlInput1" placeholder="Password">
+                </div>
+                <div class="d-grid gap-2">                    
+                    <input type="submit" value="Login" class="btn btn-primary">
+                </div>
+            </form>
+            <div class="mb-3 w-100 text-center mt-3">
+                <a th:href="@{/register}" class="text-info">Registrar</a>
+            </div>
+        </div>
+
+        <script th:src="@{/js/bootstrap.min.js}"></script>
+    </body>
+</html>
